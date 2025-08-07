@@ -18,8 +18,17 @@ repositories {
 }
 
 dependencies {
+	implementation "org.apache.httpcomponents.client5:httpclient5"
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// Spring Boot Starter Data JPA for JPA support and Hibernate as ORM
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// H2 Database for in-memory database
+	runtimeOnly 'com.h2database:h2'
+	// Optional: If you need to access the H2 console for development
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.projectlombok:lombok:1.18.38'
+	annotationProcessor 'org.projectlombok:lombok:1.18.38'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'

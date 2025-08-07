@@ -20,7 +20,7 @@ public class DownloadTLE {
             String authPath = "/ajaxauth/login";
             String userName = "jtegge@zivaro.com";
             String password = "dEd7a!UApsxSuz3jXjfV";
-            String query = "/basicspacedata/query/class/tle_latest/ORDINAL/1/EPOCH/%3Enow-30/orderby/NORAD_CAT_ID/format/3le";
+            String query = "/basicspacedata/query/class/gp/LAUNCH_DATE/%3CCURRENT-14/orderby/LAUNCH_DATE%20desc/limit/30/";
 
 
             CookieManager manager = new CookieManager();

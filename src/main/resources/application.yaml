@@ -1,0 +1,11 @@
+external:
+  space-track:
+    base-url: https://www.space-track.org
+    auth-path: /ajaxauth/login
+    query-path: /basicspacedata/query/class/gp/LAUNCH_DATE/%3CCURRENT-14/orderby/LAUNCH_DATE%20desc/limit/30/
+    logout-path: /ajaxauth/logout
+    username: jtegge@zivaro.com
+    password: dEd7a!UApsxSuz3jXjfV
+    timeouts:
+      connect: 3000   # milliseconds
+      read: 5000      # milliseconds
