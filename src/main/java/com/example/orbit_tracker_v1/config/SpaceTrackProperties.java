@@ -1,16 +1,23 @@
 package com.example.orbit_tracker_v1.config;
 
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "external.space-track")
 public class SpaceTrackProperties {
+    @Setter
     private String baseUrl;
+    @Setter
     private String authPath;
+    @Setter
     private String queryPath;
+    @Setter
     private String logoutPath;
+    @Setter
     private String username;
+    @Setter
     private String password;
     private Timeouts timeouts = new Timeouts();
 
@@ -25,16 +32,16 @@ public class SpaceTrackProperties {
     }
 
     public String getBaseUrl() { return baseUrl; }
-    public void setBaseUrl(String baseUrl) { this.baseUrl = baseUrl; }
+
     public String getAuthPath() { return authPath; }
-    public void setAuthPath(String authPath) { this.authPath = authPath; }
+
     public String getQueryPath() { return queryPath; }
-    public void setQueryPath(String queryPath) { this.queryPath = queryPath; }
+
     public String getLogoutPath() { return logoutPath; }
-    public void setLogoutPath(String logoutPath) { this.logoutPath = logoutPath; }
+
     public String getUsername() { return username; }
-    public void setUsername(String username) { this.username = username; }
+
     public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
+
     public Timeouts getTimeouts() { return this.timeouts; }
 }
