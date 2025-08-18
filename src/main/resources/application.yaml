@@ -9,3 +9,9 @@ external:
     timeouts:
       connect: 3000   # milliseconds
       read: 5000      # milliseconds
+  celestrak:
+    base-url: https://celestrak.org
+    query-path: /NORAD/elements/gp.php?GROUP=starlink&FORMAT=tle
+    timeouts:
+      connect: 3000   # milliseconds
+      read: 5000      # milliseconds

@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateConfig {
 
     @Bean
-    public RestTemplate restTemplate(SpaceTrackProperties props) {
+    public RestTemplate restTemplate(CelestrakProperties props) {
         // build a RequestConfig with timeouts
         RequestConfig requestConfig = RequestConfig.custom()
                 .setConnectTimeout(props.getTimeouts().getConnect(), java.util.concurrent.TimeUnit.MILLISECONDS)
