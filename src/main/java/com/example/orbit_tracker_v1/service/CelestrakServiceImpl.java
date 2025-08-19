@@ -4,6 +4,7 @@ import com.example.orbit_tracker_v1.config.CelestrakProperties;
 import com.example.orbit_tracker_v1.config.SpaceTrackProperties;
 import com.example.orbit_tracker_v1.model.CelestrakTLEData;
 import com.example.orbit_tracker_v1.model.GpData;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -23,8 +24,9 @@ public class CelestrakServiceImpl implements CelestrakService {
     private final RestTemplate restTemplate;
     private final CelestrakProperties props;
 
-    public CelestrakServiceImpl(RestTemplate restTemplate,
-                                CelestrakProperties props) {
+    public CelestrakServiceImpl(
+            @Qualifier("celestrakRestTemplate") RestTemplate restTemplate,
+            CelestrakProperties props) {
         this.restTemplate = restTemplate;
         this.props = props;
     }

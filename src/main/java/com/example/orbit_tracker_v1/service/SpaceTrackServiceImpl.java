@@ -2,6 +2,7 @@ package com.example.orbit_tracker_v1.service;
 
 import com.example.orbit_tracker_v1.config.SpaceTrackProperties;
 import com.example.orbit_tracker_v1.model.GpData;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.graphql.GraphQlProperties;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
@@ -19,8 +20,9 @@ public class SpaceTrackServiceImpl implements SpaceTrackService {
     private final SpaceTrackProperties props;
     private HttpHeaders sessionHeaders;
 
-    public SpaceTrackServiceImpl(RestTemplate restTemplate,
-                                 SpaceTrackProperties props) {
+    public SpaceTrackServiceImpl(
+            @Qualifier("spaceTrackRestTemplate") RestTemplate restTemplate,
+             SpaceTrackProperties props) {
         this.restTemplate = restTemplate;
         this.props = props;
     }
